@@ -2,7 +2,7 @@ library("RODBC")
 library("RCurl")
 library("rjson")
 
-connectionString <- "Driver={ODBC Driver 13 for SQL Server};Server=tcp:mhuffer.database.windows.net,1433;Database=NFL;Uid=mhuffer@mhuffer;Pwd={FRANKlin8992};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+connectionString <- "Driver={ODBC Driver 13 for SQL Server};Server=Your Server,1433;Database=Your DB;Uid=Your ID;Pwd={Your Password in Brackets};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 sqlQuery <- "SELECT GAME_ID, PLAY_ID, PLAY_TYPE, DRIVE, QTR, DOWN, TIME_SECS, PLAY_TIME_DIFF, SIDE_OF_FIELD, YARD_LINE, YARD_LINE_100, YARDS_TO_GO, POS_TEAM, DEF_TEAM, POS_TEAM_SCORE, DEF_TEAM_SCORE, ABS_SCORE_DIFF, HOME_TEAM, AWAY_TEAM FROM dbo.play_by_play_2017 WHERE (PLAY_TYPE = 'Pass' OR PLAY_TYPE = 'Run') AND HOME_TEAM = 'CHI' AND POS_TEAM <> 'CHI'"
 conn <- odbcDriverConnect(connectionString)
 full_df <- data.frame(sqlQuery(conn, sqlQuery))
