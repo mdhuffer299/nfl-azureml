@@ -1,3 +1,10 @@
+/* 
+	Author:			Michael Huffer
+	Description:	DDL for play_by_play stagin table used for Azure ML play type classification model training and testing.
+					This table contains play-by-play data for the 2009-2017 NFL seasons.  The data attributes leveraged in the model are filtered out when pulled into Azure ML.
+					This script is part of a collection of SQL, R, Azure ML, and Power BI artifacts that have been prepared for a SQL Saturday presentation.
+*/
+
 USE NFL;
 GO
 

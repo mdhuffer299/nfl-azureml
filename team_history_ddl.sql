@@ -1,3 +1,10 @@
+/* 
+	Author:			Michael Huffer
+	Description:	DDL for team_history table used for Azure ML play type classification model training and testing.  
+					This table contains aggregated play-by-play team statistics up to a game granularly.
+					This script is part of a collection of SQL, R, Azure ML, and Power BI artifacts that have been prepared for a SQL Saturday presentation.
+*/
+
 USE [NFL]
 GO
 
